@@ -3,9 +3,10 @@
     scan_use_checksum: false
     scan_use_recursive: false
   tasks:
-    - name: "Install rpm python package"
-      ansible.builtin.pip:
-      name: rpm
+    - name: "Install RPM using Yum"
+      yum:
+        name: "rpm"
+        state: present
     - name: "Scan packages (Unix/Linux)"
       scan_packages:
         os_family: '{{ ansible_os_family }}'
