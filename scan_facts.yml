@@ -3,7 +3,7 @@
     scan_use_checksum: false
     scan_use_recursive: false
   tasks:
-    - name: Install rpm python package
+    - name: "Install rpm python package"
       ansible.builtin.pip:
       name: rpm
     - name: "Scan packages (Unix/Linux)"
